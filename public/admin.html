@@ -1,0 +1,25 @@
+<!-- public/admin.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>仙人チャット 管理画面</title>
+</head>
+<body>
+  <h1>仙人チャット 管理者ログイン</h1>
+  <input id="adminPass" type="password" placeholder="管理パスワード" />
+  <button onclick="login()">ログイン</button>
+
+  <div id="adminPanel" style="display:none;">
+    <h2>ブロードキャスト</h2>
+    <input id="broadcastInput" type="text" placeholder="全体メッセージ" />
+    <button onclick="broadcast()">送信</button>
+
+    <h2>チャットログ（最新100件）</h2>
+    <pre id="logArea"></pre>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="./admin.js"></script>
+</body>
+</html>
