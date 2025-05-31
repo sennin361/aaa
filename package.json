@@ -1,0 +1,6 @@
+const io = new Server(server, {
+  cors: {
+    origin: ['https://your-admin-app-url.com'], // ★ここを管理画面のURLに！
+    methods: ['GET', 'POST']
+  }
+});
